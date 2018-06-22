@@ -13,6 +13,7 @@ import org.junit.Test;
 import com.reina.marco.sms.domain.Person;
 import com.reina.marco.sms.domain.User;
 import com.reina.marco.sms.service.PersonService;
+import com.reina.marco.sms.service.UserService;
 
 public class PersonServiceTest {
 	
@@ -24,7 +25,7 @@ public class PersonServiceTest {
 	@Before
 	public void setup() throws NamingException {
 		container = EJBContainer.createEJBContainer();
-                System.out.println("Abriendo contenedor embebido Glassfish");
+                System.out.println("Opening the Glassfish embedded container");
 		personService = (PersonService)container.getContext()
 				.lookup("java:global/classes/PersonServiceImpl!com.reina.marco.sms.service.PersonService");
                 userService = (UserService)container.getContext()
