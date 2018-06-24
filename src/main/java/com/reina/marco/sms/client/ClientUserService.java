@@ -1,7 +1,6 @@
 package com.reina.marco.sms.client;
 
 import java.util.List;
-
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -27,7 +26,7 @@ public class ClientUserService {
 			 
                         System.out.println("\nEnding the EJB from the client.");
 		} catch (NamingException e) {
-			e.printStackTrace();
+			e.printStackTrace(System.out);
 		}
 		
 	}

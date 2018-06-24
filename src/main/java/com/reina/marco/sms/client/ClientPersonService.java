@@ -27,7 +27,7 @@ public class ClientPersonService {
 			 
             System.out.println("\nEnding the EJB from the client.");
 		} catch (NamingException e) {
-			e.printStackTrace();
+			e.printStackTrace(System.out);
 		}
 		
 	}

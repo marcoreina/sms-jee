@@ -35,7 +35,7 @@ public static void main(String[] args) {
 			 
             System.out.println("\nEnding the EJB from the client.");
 		} catch (NamingException e) {
-			e.printStackTrace();
+			e.printStackTrace(System.out);
 		}
 		
 	}

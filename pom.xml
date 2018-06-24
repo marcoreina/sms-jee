@@ -4,7 +4,7 @@
   <artifactId>sms-jee</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <properties>
-  	<glassfish.embedded-static-shell.jar>C:\glassfish4\glassfish\lib\embedded\glassfish-embedded-static-shell.jar</glassfish.embedded-static-shell.jar>
+  	<glassfish.embedded-static-shell.jar>C:\glassfish-4.1.2\glassfish4\glassfish\lib\embedded\glassfish-embedded-static-shell.jar</glassfish.embedded-static-shell.jar>
   </properties>
   <dependencies>
         <dependency>

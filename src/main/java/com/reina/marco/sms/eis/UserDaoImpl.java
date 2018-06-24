@@ -1,7 +1,6 @@
 package com.reina.marco.sms.eis;
 
 import java.util.List;
-
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -18,11 +17,7 @@ public class UserDaoImpl implements UserDao {
     }
 
     public User findUserById(User user) {
-        return (User)em.createNamedQuery("User.findByIdUser").getSingleResult();
-    }
-
-    public User findUserByUsername(User user) {
-        return (User)em.createNamedQuery("User.findByUsername").getSingleResult();
+        return (User)em.find(User.class, user.getIdUser());
     }
 
     public void insertUser(User user) {

@@ -1,10 +1,8 @@
 package com.reina.marco.sms.service;
 
 import java.util.List;
-
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
-
 import com.reina.marco.sms.domain.User;
 import com.reina.marco.sms.eis.UserDao;
 
@@ -20,10 +18,6 @@ public class UserServiceImpl implements UserServiceRemote, UserService {
 
     public User findUserById(User user) {
         return userDao.findUserById(user);
-    }
-
-    public User findUserByUsername(User user) {
-        return userDao.findUserByUsername(user);
     }
 
     public void registerUser(User user) {

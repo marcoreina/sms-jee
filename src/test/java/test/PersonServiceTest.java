@@ -38,8 +38,7 @@ public class PersonServiceTest {
             this.testEJBUserService();
         }
 
-	@Test
-	public void testEJBPersonService() {
+	private void testEJBPersonService() {
 		System.out.println("Initializing EJB PersonService test");
 		assertTrue(personService != null);
 		
@@ -51,8 +50,7 @@ public class PersonServiceTest {
 		System.out.println("Ending EJB PersonService test");
 	}
         
-        @Test
-	public void testEJBUserService() {
+	private void testEJBUserService() {
 		System.out.println("Initializing EJB UserService test");
 		assertTrue(userService != null);
 		
