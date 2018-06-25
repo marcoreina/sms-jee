@@ -87,6 +87,14 @@ public class Person implements Serializable {
         this.fatherName = fatherName;
         this.email = email;
     }
+    
+    public Person(String name, String fatherName, String motherName, String email, String phone) {
+        this.name = name;
+        this.fatherName = fatherName;
+        this.motherName = motherName;
+        this.email = email;
+        this.phone = phone;
+    }
 
     public Integer getIdPerson() {
         return idPerson;
