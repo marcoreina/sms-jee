@@ -7,8 +7,10 @@ package com.reina.marco.sms.domain;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -53,7 +55,7 @@ public class User implements Serializable {
     private String password;
     
     @JoinColumn(name = "id_person", referencedColumnName = "id_person")
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Person person;
 
     public User() {
@@ -61,6 +63,12 @@ public class User implements Serializable {
 
     public User(Integer idUser) {
         this.idUser = idUser;
+    }
+    
+    public User(String username, String password, Person person) {
+        this.username = username;
+        this.password = password;
+        this.person = person;
     }
 
     public User(Integer idUser, String username, String password) {
